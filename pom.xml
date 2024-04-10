@@ -14,6 +14,14 @@
         <url>https://github.com/openapitools/openapi-generator</url>
     </scm>
 
+    <!-- <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>Github Ledgelabs Apache Maven</name>
+            <url>https://maven.pkg.github.com/ledgelabs/ledge-java-api</url>
+        </repository>
+    </distributionManagement> -->
+
     <licenses>
         <license>
             <name>Unlicense</name>
