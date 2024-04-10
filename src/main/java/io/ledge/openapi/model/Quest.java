@@ -51,7 +51,7 @@ import io.ledge.openapi.JSON;
 /**
  * Model Quest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-09T15:46:02.810169-07:00[America/Vancouver]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-10T12:19:48.827328-07:00[America/Vancouver]", comments = "Generator version: 7.4.0")
 public class Quest {
   public static final String SERIALIZED_NAME_TYPE = "type";
   @SerializedName(SERIALIZED_NAME_TYPE)

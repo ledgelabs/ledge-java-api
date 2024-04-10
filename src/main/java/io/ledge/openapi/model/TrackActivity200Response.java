@@ -49,7 +49,7 @@ import io.ledge.openapi.JSON;
 /**
  * TrackActivity200Response
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-09T15:46:02.810169-07:00[America/Vancouver]", comments = "Generator version: 7.4.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-04-10T12:19:48.827328-07:00[America/Vancouver]", comments = "Generator version: 7.4.0")
 public class TrackActivity200Response {
   public static final String SERIALIZED_NAME_MESSAGE = "message";
   @SerializedName(SERIALIZED_NAME_MESSAGE)
