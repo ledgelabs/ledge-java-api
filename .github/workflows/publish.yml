@@ -1,7 +1,7 @@
 name: Build and Publish Java API Client
 #trigger workflow
 on:
-  pull_request: #test
+  # pull_request: #test
 
   workflow_dispatch:
     branches: [main]
@@ -28,9 +28,6 @@ jobs:
 
       - name: Create settings.xml
         run: |
-          echo ${{env.REPO_ID}}
-          echo $(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')
-          echo ${{ secrets.PUBLISH_PACKAGE_TOKEN }}
           echo "<settings><servers><server><id>${{env.REPO_ID}}</id><username>$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')</username><password>${{ secrets.PUBLISH_PACKAGE_TOKEN }}</password></server></servers></settings>" > ${{ github.workspace }}/settings.xml
 
       - name: Publish package
