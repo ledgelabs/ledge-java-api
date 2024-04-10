@@ -16,7 +16,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
     steps:
       - uses: actions/checkout@v4
@@ -29,5 +29,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GENERATE_API_CLIENT_TOKEN }}
         run: |
+          touch settings.xml
+          echo "<settings><servers><server><id>${{env.REPO_ID}}</id><username>$(echo "$GITHUB_REPOSITORY" | awk -F / '{print $1}')</username><password>\${{ secrets.GENERATE_API_CLIENT_TOKEN }}</password></server></servers></settings>" > /settings.xml
           REPO=${{ env.REPO_ID }}::default::${{ env.REPO_URL }}
           mvn -s settings.xml -U -B clean deploy -DaltDeploymentRepository="${REPO}"
