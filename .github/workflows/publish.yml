@@ -1,8 +1,6 @@
 name: Build and Publish Java API Client
-#trigger workflow
-on:
-  pull_request: #test
 
+on:
   workflow_dispatch:
     branches: [main]
   # release:
@@ -46,8 +44,9 @@ jobs:
         with:
           java-version: "11"
           distribution: "temurin"
-          server-id: ${{env.REPO_ID}}
+          server-id: ${{env.REPO_ID}} # Must match the server id in settings.xml
 
+      # Authentication credentials needed to upload package
       - name: Create settings.xml
         run: |
           cd ${{ env.SOURCE_PATH }}
