@@ -24,6 +24,7 @@ jobs:
         with:
           java-version: "11"
           distribution: "temurin"
+          server-id: ${{env.REPO_ID}}
 
       - name: Create settings.xml
         run: |
@@ -34,4 +35,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.PUBLISH_PACKAGE_TOKEN }}
         run: |
           REPO=${{ env.REPO_ID }}::default::${{ env.REPO_URL }}
-          mvn -s settings.xml -U -B clean deploy -DaltDeploymentRepository="${REPO}"
+          mvn -s ${{ github.workspace }}/settings.xml -U -B clean deploy -DaltDeploymentRepository="${REPO}"
