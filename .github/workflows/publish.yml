@@ -1,7 +1,7 @@
 name: Build and Publish Java API Client
 #trigger workflow
 on:
-  pull_request:
+  pull_request: #test
 
   workflow_dispatch:
     branches: [main]
