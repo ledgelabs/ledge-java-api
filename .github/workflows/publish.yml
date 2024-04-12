@@ -3,8 +3,9 @@ name: Build and Publish Java API Client
 on:
   workflow_dispatch:
     branches: [main]
-  # release:
-  #   types: [created]
+
+  release:
+    types: [published]
 
 env:
   SOURCE_PATH: ./api
